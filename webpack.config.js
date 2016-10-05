@@ -24,12 +24,19 @@ module.exports = {
     alias: {
       Main: 'app/components/Main.jsx',
       Nav: 'app/components/Nav.jsx',
-      Weather: 'app/components/Weather.jsx',
-      WeatherForm: 'app/components/WeatherForm.jsx',
-      WeatherMessage: 'app/components/WeatherMessage.jsx',
+      Search: 'app/components/Search.jsx',
+      SearchLocationCityForm: 'app/components/SearchLocationCityForm.jsx',
+      SearchLocationGeoForm: 'app/components/SearchLocationGeoForm.jsx',
+      SearchRestAirportForm: 'app/components/SearchRestAirportForm.jsx',
+      SearchDepartureAirportForm: 'app/components/SearchDepartureAirportForm.jsx',
+      SearchDestinationAirportForm: 'app/components/SearchDestinationAirportForm.jsx',
+      SearchFlightForm: 'app/components/SearchFlightForm.jsx',
       About: 'app/components/About.jsx',
-      Examples: 'app/components/Examples.jsx',
-      openWeatherMap: 'app/api/openWeatherMap.jsx'
+      RestAirport: 'app/api/RestAirport.jsx',
+      SocketAirport: 'app/api/SocketAirport.jsx',
+      SocketDestinationAirport: 'app/api/SocketDestinationAirport.jsx',
+      applicationStyles: 'app/styles/app.scss',
+      foundationStyles: 'app/styles/foundation.css'
     },
     extensions: ['', '.js', '.jsx']
   },
@@ -42,7 +49,9 @@ module.exports = {
         },
         test: /\.jsx?$/,
         exclude: /(node_modules|bower_components)/
-      }
+      },
+      { test: /\.json$/, loader: "json-loader" },
+      {test: /\.js$/, loader: 'jsx-loader'}
     ]
   },
   devtool: 'cheap-module-eval-source-map'
